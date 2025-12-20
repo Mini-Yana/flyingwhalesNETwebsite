@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Guangzhou - A Vibrant Southern Chinese City</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?guangzhou,skyline') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #c0392b;
+        }
+
+        /* Attractions Section */
+        .attractions {
+            padding: 50px 0;
+            background: white;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            color: #2c3e50;
+        }
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .attraction-card {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .attraction-card:hover {
+            transform: translateY(-10px);
+        }
+        .attraction-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .attraction-info {
+            padding: 20px;
+        }
+        .attraction-info h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .attraction-info p {
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        .price {
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .attractions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#attractions">Attractions</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Guangzhou</h1>
+            <p>Discover the vibrant culture, modern architecture, and delicious cuisine of Southern China's pearl</p>
+            <a href="#attractions" class="btn">Explore Attractions</a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Attractions Section -->
+        <section class="attractions" id="attractions">
+            <h2 class="section-title">Top Attractions</h2>
+            <div class="attractions-grid">
+                <!-- Attraction 1: Canton Tower -->
+                <div class="attraction-card">
+                    <img src="https://source.unsplash.com/400x300/?canton,tower" alt="Canton Tower" class="attraction-img">
+                    <div class="attraction-info">
+                        <h3>Canton Tower</h3>
+                        <p>One of the tallest towers in the world, offering breathtaking views of the city.</p>
+                        <p class="price">Ticket: From ¥120[2](@ref)</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 2: Chimelong Tourist Resort -->
+                <div class="attraction-card">
+                    <img src="https://source.unsplash.com/400x300/?amusement,park" alt="Chimelong" class="attraction-img">
+                    <div class="attraction-info">
+                        <h3>Chimelong Tourist Resort</h3>
+                        <p>Home to a safari park, amusement park, and international circus.</p>
+                        <p class="price">Ticket: From ¥250[1](@ref)</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 3: Baiyun Mountain -->
+                <div class="attraction-card">
+                    <img src="https://source.unsplash.com/400x300/?baiyun,mountain" alt="Baiyun Mountain" class="attraction-img">
+                    <div class="attraction-info">
+                        <h3>Baiyun Mountain</h3>
+                        <p>Known as "the lung of Guangzhou" with beautiful hiking trails and scenic spots.</p>
+                        <p class="price">Ticket: Free - ¥10</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 4: Shamian Island -->
+                <div class="attraction-card">
+                    <img src="https://source.unsplash.com/400x300/?colonial,architecture" alt="Shamian Island" class="attraction-img">
+                    <div class="attraction-info">
+                        <h3>Shamian Island</h3>
+                        <p>Historic area with European-style architecture and tranquil environment.</p>
+                        <p class="price">Ticket: Free</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 5: Chen Clan Ancestral Hall -->
+                <div class="attraction-card">
+                    <img src="https://source.unsplash.com/400x300/?chinese,temple" alt="Chen Clan Ancestral Hall" class="attraction-img">
+                    <div class="attraction-info">
+                        <h3>Chen Clan Ancestral Hall</h3>
+                        <p>Excellent example of traditional Cantonese architecture and art.</p>
+                        <p class="price">Ticket: ¥10</p>
+                    </div>
+                </div>
+
+                <!-- Attraction 6: Yuexiu Park -->
+                <div class="attraction-card">
+                    <img src="https://source.unsplash.com/400x300/?yuexiu,park" alt="Yuexiu Park" class="attraction-img">
+                    <div class="attraction-info">
+                        <h3>Yuexiu Park</h3>
+                        <p>Largest park in downtown Guangzhou featuring the Five Rams Sculpture.</p>
+                        <p class="price">Ticket: Free[2](@ref)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Guangzhou Tourism. All rights reserved.</p>
+            <p>Contact: info@| Follow us on social media</p>
+        </div>
+    </footer>
+</body>
+</html>
