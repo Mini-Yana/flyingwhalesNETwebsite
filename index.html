@@ -347,21 +347,27 @@ form.card{background:#fff;border-radius:24px;padding:40px;box-shadow:var(--shado
 #toast.show{opacity:1;transform:translate(-50%,0)}
 #toast svg{color:var(--sea-2)}
 
-/* ── Plan Your Trip, when it sits directly under Our Story (deep violet sky) ── */
+/* ── Plan Your Trip · FIRST SCREEN (deep violet sky) ── */
 .story-contact{
-  background:linear-gradient(180deg,rgba(20,8,40,.0),rgba(20,8,40,.55) 34%,var(--deep) 100%);
-  padding:clamp(64px,10vw,120px) 0 clamp(72px,11vw,140px);
+  background:
+    radial-gradient(1100px 620px at 86% 4%,rgba(140,99,216,.28),transparent 60%),
+    radial-gradient(820px 600px at 4% 102%,rgba(79,50,132,.42),transparent 66%),
+    linear-gradient(180deg,#1c0c34 0%,#160826 52%,#1e0d38 100%);
+  padding:clamp(120px,15vw,190px) 0 clamp(88px,12vw,150px);
   position:relative;z-index:3;
 }
-.story-contact .eyebrow{color:#e9d5ff}
+/* as the hero screen it owns the full viewport height */
+.story-contact.hero-contact{min-height:100vh;display:flex;align-items:center}
+.story-contact.hero-contact .reveal{opacity:1;transform:none}
+.story-contact .eyebrow{color:#f0e2ff}
 .story-contact .eyebrow::before{background:var(--sea-2)}
-.story-contact .info h2{color:#fbf7ff}
-.story-contact-lede{color:rgba(233,219,250,.82);font-size:17px;margin:0}
-.story-contact .info li b{color:#f3ebff}
-.story-contact .info li span{color:rgba(233,219,250,.72)}
-.story-contact .info .social a{color:#e9d5ff;border-color:rgba(233,215,255,.28)}
+.story-contact .info h2{color:#fffdf8}
+.story-contact-lede{color:rgba(240,231,252,.94);font-size:17px;margin:0}
+.story-contact .info li b{color:#ffffff}
+.story-contact .info li span{color:rgba(240,231,252,.86)}
+.story-contact .info .social a{color:#f0e2ff;border-color:rgba(233,215,255,.38)}
 .story-contact .info .social a:hover{color:#fff;border-color:var(--sea-2)}
-.story-contact .contact-link{color:#f3ebff;border-bottom-color:rgba(233,215,255,.42)}
+.story-contact .contact-link{color:#fffdf8;border-bottom-color:rgba(233,215,255,.6)}
 .story-contact .contact-link:hover{color:#fff;border-bottom-color:#fff}
 /* keep the form card pale & readable against the violet bleed */
 .story-contact form.card{background:rgba(255,253,248,.98);border-color:rgba(255,255,255,.14);box-shadow:0 30px 70px -30px rgba(2,8,34,.65)}
@@ -610,6 +616,68 @@ footer{background:linear-gradient(180deg,#200840,#15052b);color:#d6c9e8;padding:
   </button>
 </header>
 
+<!-- ═══ PLAN YOUR TRIP · now the FIRST SCREEN ═══ -->
+<section id="contact" class="story-contact hero-contact" aria-labelledby="planTitle">
+  <div class="wrap two">
+    <div class="info reveal">
+      <div class="eyebrow">Plan Your Trip</div>
+      <h2 id="planTitle">Tell us how you'd like to drift.</h2>
+      <p class="story-contact-lede">Send a few lines and we'll reply within a day with a hand-written outline — no templates, no pressure.</p>
+      <ul>
+        <li>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H6l-2 3z"/><path d="M8 9h8M8 13h5"/></svg>
+          <span><b>Write to us</b><a class="contact-link" href="mailto:fywhales@gmail.com">fywhales@gmail.com</a></span>
+        </li>
+        <li>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9V7.1a2 2 0 0 0-1.1-1.8l-8-4a2 2 0 0 0-1.8 0l-8 4A2 2 0 0 0 2 7.1v9.8a2 2 0 0 0 1.1 1.8l8 4a2 2 0 0 0 1.8 0l8-4a2 2 0 0 0 1.1-1.8z"/><path d="M6 8.5 12 11.5l6-3M12 11.5v9"/></svg>
+          <span><b>Base</b>Ersha Island, Yuexiu · Guangzhou, China</span>
+        </li>
+        <li>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 9-11a4 4 0 0 0-8-1.5"/><path d="M8 12a4 4 0 0 0-8-1.5C2 15.5 9 22 9 22"/><circle cx="12" cy="11" r="2.5"/></svg>
+          <span><b>When</b>Best from Oct–Apr · we'll dodge the summer rain</span>
+        </li>
+      </ul>
+      <div class="social" aria-label="Social links">
+        <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><path d="M16.5 7.5h.01M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg></a>
+        <a href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        <a href="#" aria-label="Little Red Book"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></a>
+        <a href="#" aria-label="Email"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.4 5.6a2 2 0 0 0 2.2 0L20.5 7"/></svg></a>
+      </div>
+    </div>
+
+    <form class="card reveal" id="tripForm" action="https://formsubmit.co/ajax/fywhales@gmail.com" method="POST" novalidate data-fs-ajax="true">
+      <!-- FormSubmit config: subject + table layout, no captcha, silent mode (we handle UI ourselves) -->
+      <input type="hidden" name="_subject" value="New drift notes from the Flying Whales site">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="">
+      <div class="row2">
+        <div class="fld"><label for="name">Your name</label><input id="name" name="name" type="text" required placeholder="Ada Lovelace"></div>
+        <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="ada@ocean.com"></div>
+      </div>
+      <div class="row2">
+        <div class="fld"><label for="when">When are you coming?</label><input id="when" name="when" type="text" placeholder="e.g. mid-Nov, 4 days"></div>
+        <div class="fld"><label for="who">Travelling</label><select id="who" name="who"><option>Just me</option><option>Couple</option><option>Family with kids</option><option>Small group (4–8)</option></select></div>
+      </div>
+      <div class="fld"><label>What calls you?</label>
+        <div class="chips">
+          <label class="chip on"><input type="checkbox" name="vibe" value="Slow &amp; local" checked> Slow &amp; local</label>
+          <label class="chip"><input type="checkbox" name="vibe" value="Food first"> Food first</label>
+          <label class="chip"><input type="checkbox" name="vibe" value="Photo &amp; skyline"> Photo &amp; skyline</label>
+          <label class="chip"><input type="checkbox" name="vibe" value="Parks &amp; hiking"> Parks &amp; hiking</label>
+          <label class="chip"><input type="checkbox" name="vibe" value="Kid-friendly"> Kid-friendly</label>
+        </div>
+      </div>
+      <div class="fld"><label for="msg">Anything else? Dietary needs, mobility, secret wishes…</label><textarea id="msg" name="msg" rows="3" placeholder="We read every word."></textarea></div>
+      <button class="submit" type="submit" id="sendBtn">Send my drift notes
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-left:6px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <span class="sent" id="sentLabel">✓ message sent · we'll write back within 24h</span>
+      <p class="note">We'll reply within 24 hours. No newsletters, no spam — just your trip outline.</p>
+    </form>
+  </div>
+</section>
+
 <section class="story-open" id="top" aria-labelledby="storyTitle">
   <!-- whale drifting across the violet sky -->
   <div class="story-sky" aria-hidden="true">
@@ -695,67 +763,7 @@ footer{background:linear-gradient(180deg,#200840,#15052b);color:#d6c9e8;padding:
   </div>
 </section>
 
-<!-- ═══ PLAN YOUR TRIP · sits right under Our Story ═══ -->
-<section id="contact" class="story-contact" aria-labelledby="planTitle">
-  <div class="wrap two">
-    <div class="info reveal">
-      <div class="eyebrow">Plan Your Trip</div>
-      <h2 id="planTitle">Tell us how you'd like to drift.</h2>
-      <p class="story-contact-lede">Send a few lines and we'll reply within a day with a hand-written outline — no templates, no pressure.</p>
-      <ul>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H6l-2 3z"/><path d="M8 9h8M8 13h5"/></svg>
-          <span><b>Write to us</b><a class="contact-link" href="mailto:fywhales@gmail.com">fywhales@gmail.com</a></span>
-        </li>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9V7.1a2 2 0 0 0-1.1-1.8l-8-4a2 2 0 0 0-1.8 0l-8 4A2 2 0 0 0 2 7.1v9.8a2 2 0 0 0 1.1 1.8l8 4a2 2 0 0 0 1.8 0l8-4a2 2 0 0 0 1.1-1.8z"/><path d="M6 8.5 12 11.5l6-3M12 11.5v9"/></svg>
-          <span><b>Base</b>Ersha Island, Yuexiu · Guangzhou, China</span>
-        </li>
-        <li>
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.5 9-11a4 4 0 0 0-8-1.5"/><path d="M8 12a4 4 0 0 0-8-1.5C2 15.5 9 22 9 22"/><circle cx="12" cy="11" r="2.5"/></svg>
-          <span><b>When</b>Best from Oct–Apr · we'll dodge the summer rain</span>
-        </li>
-      </ul>
-      <div class="social" aria-label="Social links">
-        <a href="#" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><path d="M16.5 7.5h.01M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg></a>
-        <a href="#" aria-label="X"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
-        <a href="#" aria-label="Little Red Book"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M9 8h6M9 12h6M9 16h4"/></svg></a>
-        <a href="#" aria-label="Email"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M3.5 7l8.4 5.6a2 2 0 0 0 2.2 0L20.5 7"/></svg></a>
-      </div>
-    </div>
 
-    <form class="card reveal" id="tripForm" action="https://formsubmit.co/ajax/fywhales@gmail.com" method="POST" novalidate data-fs-ajax="true">
-      <!-- FormSubmit config: subject + table layout, no captcha, silent mode (we handle UI ourselves) -->
-      <input type="hidden" name="_subject" value="New drift notes from the Flying Whales site">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="">
-      <div class="row2">
-        <div class="fld"><label for="name">Your name</label><input id="name" name="name" type="text" required placeholder="Ada Lovelace"></div>
-        <div class="fld"><label for="email">Email</label><input id="email" name="email" type="email" required placeholder="ada@ocean.com"></div>
-      </div>
-      <div class="row2">
-        <div class="fld"><label for="when">When are you coming?</label><input id="when" name="when" type="text" placeholder="e.g. mid-Nov, 4 days"></div>
-        <div class="fld"><label for="who">Travelling</label><select id="who" name="who"><option>Just me</option><option>Couple</option><option>Family with kids</option><option>Small group (4–8)</option></select></div>
-      </div>
-      <div class="fld"><label>What calls you?</label>
-        <div class="chips">
-          <label class="chip on"><input type="checkbox" name="vibe" value="Slow &amp; local" checked> Slow &amp; local</label>
-          <label class="chip"><input type="checkbox" name="vibe" value="Food first"> Food first</label>
-          <label class="chip"><input type="checkbox" name="vibe" value="Photo &amp; skyline"> Photo &amp; skyline</label>
-          <label class="chip"><input type="checkbox" name="vibe" value="Parks &amp; hiking"> Parks &amp; hiking</label>
-          <label class="chip"><input type="checkbox" name="vibe" value="Kid-friendly"> Kid-friendly</label>
-        </div>
-      </div>
-      <div class="fld"><label for="msg">Anything else? Dietary needs, mobility, secret wishes…</label><textarea id="msg" name="msg" rows="3" placeholder="We read every word."></textarea></div>
-      <button class="submit" type="submit" id="sendBtn">Send my drift notes
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-left:6px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </button>
-      <span class="sent" id="sentLabel">✓ message sent · we'll write back within 24h</span>
-      <p class="note">We'll reply within 24 hours. No newsletters, no spam — just your trip outline.</p>
-    </form>
-  </div>
-</section>
 
 <section class="hero" id="hero">
   <svg class="whale-bg w1" viewBox="0 0 200 120" aria-hidden="true"><path d="M10 70c20-18 56-30 100-26 26 3 48 14 58 28-14 8-38 6-60 2-24-5-52-4-78-6z" fill="currentColor"/><path d="M150 66c10 2 20 6 24 14-8 3-18-1-24-8z" fill="currentColor"/></svg>
@@ -1058,14 +1066,14 @@ footer{background:linear-gradient(180deg,#200840,#15052b);color:#d6c9e8;padding:
 <script>
 (function(){
   var nav=document.getElementById('nav'), links=document.getElementById('navLinks'), btn=document.getElementById('menuBtn');
-  var story=document.getElementById('top'), hero=document.getElementById('hero');
+  var contact=document.getElementById('contact'), hero=document.getElementById('hero');
   function paint(){
     var y=window.scrollY, scrolled=y>40;
     nav.classList.toggle('scrolled',scrolled);
-    // first screen = deep violet sky (light nav text); switch to dark text on the pale section
-    var pastStory=story && hero && (y + 96) >= hero.offsetTop;
-    nav.classList.toggle('at-top', !pastStory);
-    nav.style.setProperty('color', pastStory ? '' : '');
+    // first screen = Plan Your Trip (deep violet sky, light nav text);
+    // keep light text across Our Story too, switch to dark once the pale Hero arrives
+    var pastDark=hero && (y + 96) >= hero.offsetTop;
+    nav.classList.toggle('at-top', !pastDark);
   }
   window.addEventListener('scroll',paint,{passive:true}); paint();
 
